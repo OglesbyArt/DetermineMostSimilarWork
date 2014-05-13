@@ -63,6 +63,7 @@ public class DetermineMostSimilarWork
             int mediumnumber=0;
             if (paintingsFile.exists())
             {
+                
                 RandomAccessFile inFile = new RandomAccessFile (paintingsFile, "r");
                 while (!found && (inFile.getFilePointer()!=inFile.length()))
                 {
@@ -70,13 +71,22 @@ public class DetermineMostSimilarWork
 
                     if (ap.getArtistLastName().equalsIgnoreCase(alastname) )
                     {
+
                         if (ap.getSubject().equalsIgnoreCase(sub))
+                        {
+                            
                              subjectnumber=1;
+                        }
+                            
                         else subjectnumber=0;
 
 
                         if(ap.getMedium().equalsIgnoreCase(med))
+                        {
+                         
                             mediumnumber=1;
+                        }
+                            
                         else mediumnumber=0;
 
                         double largerArea=compareReturnLarger(ap.getWidth()*ap.getHeight(), area);
@@ -93,7 +103,7 @@ public class DetermineMostSimilarWork
                             max=ap.getAuctionSalesPrice();
                             coeff=dummycoeff;
                         }
-                        System.out.println(coeff);
+
                     }
                 }
 
@@ -105,7 +115,7 @@ public class DetermineMostSimilarWork
                 System.out.println("The coefficient of similarity is zero for this artist.");
                 return 0;
             }else
-            System.out.println(coeff);
+
             return max;
         }
         catch (Exception e)
@@ -210,7 +220,6 @@ public class DetermineMostSimilarWork
                 }
                 inFile.close();
             }
-            System.out.println(fashionability);
             return fashionability;
         }
         catch (Exception e)
