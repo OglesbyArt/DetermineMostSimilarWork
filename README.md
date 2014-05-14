@@ -17,16 +17,7 @@ public class DetermineMostSimilarWork
     {
         
     }
-     //Desc: Compares two strings and returns a 1 if the strings match and
-    // 0 if the strings do not match
-    //Pre: the arguments must be strings
-    //Return: 1 if the strings match and 0 if they do not match
-    public  int computeScore(String s1, String s2)
-    {
-        if (s1.equals(s2))
-            return 1;
-        else return 2;
-    }
+
 
     //Desc: compares two doubles and returns the larger of the two
     //Pre: the arguments must be doubles
@@ -47,7 +38,12 @@ public class DetermineMostSimilarWork
         else return d2;
     }
 
-
+    //Desc: Searches the Auctionpainting file for masterpieces by the given 
+    //  artist, it then finds the highest coefficient of similarity for that
+    //  artist, the auction sales price for that painting witht the highest 
+    //  coefficient of similarity is returned
+    //Return: the auction sales price for the painting witht the highest 
+    //  coefficient of similarity
 
     public static double findPrice(String alastname,  String med, String sub, double area)
     {
@@ -125,8 +121,14 @@ public class DetermineMostSimilarWork
             return 0;
         }
     }
-
-        public static Date findDate(String alastname,  String med, String sub, double area)
+    
+    //Desc: Searches the Auctionpainting file for masterpieces by the given 
+    //  artist, it then finds the highest coefficient of similarity for that
+    //  artist, the date of auction for that painting witht the highest 
+    //  coefficient of similarity is returned
+    //Return: the date of auction for the painting witht the highest 
+    //  coefficient of similarity
+    public static Date findDate(String alastname,  String med, String sub, double area)
     {
         try
         {
@@ -189,14 +191,13 @@ public class DetermineMostSimilarWork
             return new Date();
         }
     }
-             //Desc:uses the last name and the first name of an artist to find a record
+        
+    //Desc:uses the last name and the first name of an artist to find a record
     //     in the file
-    //Post:
-    //Return: returns true if record is found or false if record is not found
+    //Return: returns the fashionability value for that artist
    public int findFashionabilityValue(String afirstname, String alastname)
     {
-  // find locates a given investment record if it exists.
-  // Returns true if the investment is located, otherwise false.
+
         try
         {
             Artist a = new Artist();
@@ -224,7 +225,7 @@ public class DetermineMostSimilarWork
         }
         catch (Exception e)
         {
-            System.out.println ("***** Error: DetermineMostSimilarWork.findFashionability () *****");
+            System.out.println ("***** Error: DetermineMostSimilarWork.findFashionabilityValue () *****");
             System.out.println ("\t" + e);
             return 0;
         }
