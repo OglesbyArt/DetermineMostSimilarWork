@@ -38,11 +38,11 @@ public class DetermineMostSimilarWork
         else return d2;
     }
 
-    //Desc: Searches the Auctionpainting file for masterpieces by the given 
+    //Desc: Searches the Auctionpainting file for masterpieces by the given
     //  artist, it then finds the highest coefficient of similarity for that
-    //  artist, the auction sales price for that painting witht the highest 
+    //  artist, the auction sales price for that painting witht the highest
     //  coefficient of similarity is returned
-    //Return: the auction sales price for the painting witht the highest 
+    //Return: the auction sales price for the painting witht the highest
     //  coefficient of similarity
 
     public static double findPrice(String alastname,  String med, String sub, double area)
@@ -121,12 +121,12 @@ public class DetermineMostSimilarWork
             return 0;
         }
     }
-    
-    //Desc: Searches the Auctionpainting file for masterpieces by the given 
+
+    //Desc: Searches the Auctionpainting file for masterpieces by the given
     //  artist, it then finds the highest coefficient of similarity for that
-    //  artist, the date of auction for that painting witht the highest 
+    //  artist, the date of auction for that painting witht the highest
     //  coefficient of similarity is returned
-    //Return: the date of auction for the painting witht the highest 
+    //Return: the date of auction for the painting witht the highest
     //  coefficient of similarity
     public static Date findDate(String alastname,  String med, String sub, double area)
     {
@@ -191,7 +191,7 @@ public class DetermineMostSimilarWork
             return new Date();
         }
     }
-        
+
     //Desc:uses the last name and the first name of an artist to find a record
     //     in the file
     //Return: returns the fashionability value for that artist
