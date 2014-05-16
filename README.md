@@ -12,7 +12,8 @@ import java.util.Date;
 
 public class DetermineMostSimilarWork
 {
-
+    
+    //Desc: constructor for DetermineMostSimilarWork class
     public DetermineMostSimilarWork()
     {
         
